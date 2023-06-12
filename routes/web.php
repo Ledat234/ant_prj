@@ -43,14 +43,14 @@ Route::get('/music/home', [MusicController::class, 'home'])->name('music.home');
 
 Route::post('/', [UserController::class, 'store'])->name('auth.register');
 Route::get('/register', [UserController::class, 'show'])->name('welcome.register');
-Route::get('/', [UserController::class, 'showLogin'])->name('welcome.login');
+Route::get('/login', [UserController::class, 'showLogin'])->name('welcome.login');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 Route::post('/index', [UserController::class, 'login'])->name('auth.login');
 
 
 
 
-Route::get('/clien/home', [UserController::class, 'home'])->name('pages.homepage');
+Route::get('/', [UserController::class, 'home'])->name('pages.homepage');
 Route::get('/music/index', [UserController::class, 'index'])->name('music.index');
 Route::get('/clien/deital/{id}', [UserController::class, 'detail'])->name('pages.detail');
 Route::get('/search', [UserController::class, 'search'])->name('pages.search');
